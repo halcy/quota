@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>quota.pl demo</title>
+<style type="text/css">
+body {
+	background-color:#222222;
+	font-family:Helvetica, Arial, sans;
+	color:#FFFFFF;
+	text-align:center;
+}
+
+h1 {
+	text-align:center;
+	font-size:5em;
+}
+
+div.legend {
+	display:inline-block;
+	width:25px;
+	height:25px;
+	margin-left:20px;
+	margin-right:5px;
+}
+
+div.trend {
+	background-color:#6886B4;
+}
+
+div.finance {
+	background-color:#FDD84E;
+}
+
+span {
+	font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+<h1>Demo for quota.pl</h1>
+<h2>Google - GOOG</h2>
+<p>
+<div class="legend finance">&nbsp;</div><span>Stock quote</span>
+<div class="legend trend">&nbsp;</div><span>Search trend</span>
+</p>
+<p><object data="quota.pl" width="900" height="400"></object></p>
+<h2>Microsoft - MSFT</h2>
+<p>
+<div class="legend finance">&nbsp;</div><span>Stock quote</span>
+<div class="legend trend">&nbsp;</div><span>Search trend</span>
+</p>
+<p><object data="quota.pl?symbol=MSFT&phrase=Microsoft"
+ width="900" height="400"></object></p>
+<h2>Apple - AAPL</h2>
+<p>
+<div class="legend finance">&nbsp;</div><span>Stock quote</span>
+<div class="legend trend">&nbsp;</div><span>Search trend</span>
+</p>
+<p><object data="quota.pl?symbol=AAPL&phrase=Apple"
+ width="900" height="400"></object></p>
+</body>
+</html>
