@@ -30,6 +30,13 @@ div.finance {
 	background-color:#FDD84E;
 }
 
+ul {
+	text-align:left;
+	width:900px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 span {
 	font-weight:bold;
 }
@@ -38,25 +45,45 @@ span {
 </head>
 <body>
 <h1>Demo for quota.pl</h1>
+<h2>Parameters</h2>
+<p><ul>
+<li><strong>type</strong> - Filetype for the output (svg, png). Default: svg.</li>
+<li><strong>phrase</strong> - Search phrase for the trends. Default: Google.</li>
+<li><strong>symbo</strong>l - Stock symbol for the stock graph. Default: GOOG.</li>
+<li><strong>w</strong> - Width for the resulting image. Default: 900.</li>
+<li><strong>h</strong> - height for the resulting image. Default: 400.</li>
+<li><strong>style</strong> - Stylesheet URL for custom graph styling. Only works in svg mode.
+Have a look at the documentation for <a href="http://search.cpan.org/~ianroddis/SVG-TT-Graph-0.12/lib/SVG/TT/Graph.pm">
+SVG::TT::Graph</a> if you are interested in using this. Default:
+<a href="graph.css">graph.css</a></li>
+<li><strong>from</strong> - Start date for the graph. Default: One year in the past.</li>
+<li><strong>to</strong> - End date for the graph. Default: Now.</li>
+</ul></p>
 <h2>Google - GOOG</h2>
 <p>
 <div class="legend finance">&nbsp;</div><span>Stock quote</span>
 <div class="legend trend">&nbsp;</div><span>Search trend</span>
 </p>
-<p><object data="quota.pl" width="900" height="400"></object></p>
+<p><object data="quota.pl" width="900" height="400"></object><br/>
+<code>quota.pl</code>
+</p>
 <h2>Microsoft - MSFT</h2>
 <p>
 <div class="legend finance">&nbsp;</div><span>Stock quote</span>
 <div class="legend trend">&nbsp;</div><span>Search trend</span>
 </p>
-<p><object data="quota.pl?symbol=MSFT&phrase=Microsoft"
- width="900" height="400"></object></p>
+<p><object data="quota.pl?symbol=MSFT&amp;phrase=Microsoft"
+width="900" height="400"></object><br/>
+<code>quota.pl?symbol=MSFT&&amp;phrase=Microsoft</code>
+</p>
 <h2>Apple - AAPL</h2>
 <p>
 <div class="legend finance">&nbsp;</div><span>Stock quote</span>
 <div class="legend trend">&nbsp;</div><span>Search trend</span>
 </p>
-<p><object data="quota.pl?symbol=AAPL&phrase=Apple"
- width="900" height="400"></object></p>
+<p><object data="quota.pl?symbol=AAPL&amp;phrase=Apple"
+width="900" height="400"></object><br/>
+<code>quota.pl?symbol=AAPL&amp;phrase=Apple</code>
+</p>
 </body>
 </html>
